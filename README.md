@@ -29,7 +29,7 @@ This application serves a **real and practical purpose** by addressing the genui
 ### Local Development
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/MEE-DRED/nutrition-finder.git
 cd nutrition-finder
 
 # Open index.html in your browser
@@ -63,7 +63,7 @@ The demo video showcases:
 ### Build the Docker Image
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/MEE-DRED/nutrition-finder.git
 cd nutrition-finder
 
 # Build the Docker image
