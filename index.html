@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dine with Mee Nutrition Fact Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Dine with Mee Nutrition Fact Finder</h1>
+            <p>Discover detailed nutritional information for foods and recipes to support your healthy eating journey
+            </p>
+        </div>
+
+        <div class="search-section">
+            <input type="text" class="search-input" id="foodInput"
+                placeholder="Search for food items (e.g., apple, chicken breast, quinoa salad)">
+            <button class="search-btn" onclick="searchFood()">Search</button>
+        </div>
+
+        <div class="filter-section">
+            <select class="filter-select" id="calorieFilter" onchange="applyFilters()">
+                <option value="all">All Calories</option>
+                <option value="low">Low Calorie (≤100)</option>
+                <option value="medium">Medium Calorie (101-300)</option>
+                <option value="high">High Calorie (>300)</option>
+            </select>
+            <select class="filter-select" id="sortFilter" onchange="applyFilters()">
+                <option value="name">Sort by Name</option>
+                <option value="calories">Sort by Calories</option>
+                <option value="protein">Sort by Protein</option>
+                <option value="carbs">Sort by Carbs</option>
+            </select>
+            <button class="filter-btn" onclick="clearResults()">Clear Results</button>
+        </div>
+
+        <div class="stats-bar" id="statsBar" style="display: none;">
+            <div class="stat-item">
+                <div class="stat-value" id="totalItems">0</div>
+                <div class="stat-label">Items Found</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="avgCalories">0</div>
+                <div class="stat-label">Avg Calories</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="totalProtein">0</div>
+                <div class="stat-label">Total Protein (g)</div>
+            </div>
+        </div>
+
+        <div id="loadingIndicator" class="loading" style="display: none;">
+            <p>🔍 Searching for nutritional information...</p>
+        </div>
+
+        <div id="errorContainer"></div>
+
+        <div class="results-grid" id="resultsContainer"></div>
+
+        <div class="all-meals-section">
+            <h2>All Available Meals</h2>
+            <div class="all-meals-grid" id="allMealsContainer"></div>
+        </div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <h3>No results found</h3>
+            <p>Try searching for different food items or check your spelling</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
