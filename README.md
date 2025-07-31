@@ -38,6 +38,18 @@ python -m http.server 8000
 # Then visit http://localhost:8000
 ```
 
+## 🎥 Demo Video
+
+**Watch the complete deployment demonstration:**  
+📺 **[Nutrition Fact Finder - Docker Deployment & Load Balancing Demo](https://youtu.be/fvESLsZaoz8)**
+
+The demo video showcases:
+- Local application functionality
+- Docker containerization process
+- Load balancer configuration
+- Round-robin traffic distribution
+- End-to-end testing verification
+
 ## 🐳 Docker Image Details
 
 - **Docker Hub Repository:** https://hub.docker.com/r/themildred/nutrition-finder
